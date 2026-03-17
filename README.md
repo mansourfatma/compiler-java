@@ -1,80 +1,29 @@
-# Package arbre
+# Compiler Project (Java)
 
 ## Description
+Projet académique réalisé dans le cadre d’un cours de compilation.
 
-Ce projet contient un package JAVA de gestion d'arbres n-aire 
-adaptés à la représentation de la structure de données arbre abstrait
-du projet de réalisation d'un compilateur dans le cadre du cours de Compilation
-en Licence MIASHS parcours MIAGE et TAL à l'Université de Lorraine
+Ce projet consiste à manipuler des structures d’arbres abstraits afin de représenter et traiter du code.
 
-## Capture d'écran
-```
-% ./tester 4
-SI/1
-└─INF
-  └─IDF/j
-  └─IDF/k
-└─BLOC
-  └─AFF
-    └─IDF/i
-    └─CONST/10
-└─BLOC
-```
+## Objectif
+L’objectif est de comprendre les différentes étapes de la compilation, notamment la représentation des programmes sous forme d’arbres et leur manipulation.
 
-## Utilisation
+## Technologies utilisées
+- Java
+- Maven
 
-Voici un exemple de code en Java qui crée un arbre abstrait et qui l'affiche à la suite
+## Fonctionnalités
+- Construction d’arbres abstraits
+- Représentation de structures de code
+- Manipulation et affichage des arbres
 
-```java
-Idf idf41 = new Idf("j");
-Idf idf42 = new Idf("k");
-Inferieur inf4 = new Inferieur();
-inf4.setFilsGauche(idf41);
-inf4.setFilsDroit(idf42);
-Idf idf43 = new Idf("i");
-Const const41 = new Const(10);
-Affectation aff41 = new Affectation();
-aff41.setFilsGauche(idf43);
-aff41.setFilsDroit(const41);
-Bloc bloc4 = new Bloc();
-bloc4.ajouterUnFils(aff41);
-Si si4 = new Si(1);
-si4.setCondition(inf4);
-si4.setBlocAlors(bloc4);
-TxtAfficheur.afficher(si4);
-```
+## État du projet
+Projet académique en cours de développement.  
+Certaines fonctionnalités ne sont pas encore entièrement finalisées.
 
-##Diagramme des classes
-
-![](arbre.png)
-
-## Prérequis
-
-Utiliser un IDE qui intègre Maven (par exemple Eclipse)
-
-## Installation
-
-1. Télécharger la distribution .zip depuis le [gitlab de l'Université de Lorraine](https://gitlab.univ-lorraine.fr/roussana5/arbre)
-2. Décompresser dans un dossier
-3. Importer le projet dans votre IDE (pour Eclipse : `File>Import...>Existing Maven Project...`
-4. Installer dans le repository local (pour Eclipse: `Run As...>Maven Install`
-
-## Utilisation
-
-Dans un projet Maven, ajouter la dépendance suivante dans le fichier `pom.xml` :
-
-```
-		<dependency>
-			<groupId>fr.ul.miage</groupId>
-			<artifactId>arbre</artifactId>
-			<version>0.0.7</version>
-		</dependency>
-
-```
-##Auteur
-
-Azim Roussanaly (IDMC/Université de Lorraine)
-
-##Licence
-
+## Ce que j’ai appris
+Ce projet m’a permis de comprendre des concepts avancés comme :
+- l’analyse syntaxique
+- la représentation de code sous forme d’arbre
+- la programmation orientée objet en Java
 Licence MIT
